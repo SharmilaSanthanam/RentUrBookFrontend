@@ -1,0 +1,41 @@
+.signup_image_container {
+    background-image: url(https://img.freepik.com/free-vector/cartoon-background-luxury-old-room-library-interior-with-wooden-bookcase-leather-coach-place-reading-with-sofa-rows-various-literature-volume-spines-athenaeum-vector-illustration_107791-11710.jpg?size=626&ext=jpg&ga=GA1.2.1501460135.1662568336);
+    height: 100vh;
+    background-size: cover;
+}
+
+.signup_form_container,
+.login_form_container {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    text-align: start;
+}
+
+.login_image_container {
+    background-image: url(https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?size=338&ext=jpg&ga=GA1.2.1501460135.1662568336);
+    height: 100vh;
+    width:50%;
+    background-size: cover;
+}
+
+.signup_button {
+    margin-top:3%
+}
+
+.login_button {
+    margin-top:3%;
+    text-align: end;
+}
+
+@media screen and (max-width: 756px) {
+    .login_image_container,
+    .signup_image_container {
+        display: none;
+    }
+}
+
+
