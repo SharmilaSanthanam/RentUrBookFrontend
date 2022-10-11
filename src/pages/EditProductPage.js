@@ -101,7 +101,6 @@ function EditProductPage() {
                                 </option>
                                 <option value="TechnicalBooks">Technical Books</option>
                                 <option value="KidsStoryBooks">Kids Story Books</option>
-                                <option value="SchoolBooks">School Books</option>
                                 <option value="Novels">Novels</option>
                             </Form.Select>
                         </Form.Group>

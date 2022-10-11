@@ -33,7 +33,7 @@ function handleToggleNotifications() {
 
   return (
 
-    <Navbar className="navbar navbar-light"  style={{backgroundColor: "#ffbf00"}} expand="lg">
+    <Navbar className="navbar navbar-light"  style={{backgroundColor: "#ffa812"}} expand="lg">
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand >

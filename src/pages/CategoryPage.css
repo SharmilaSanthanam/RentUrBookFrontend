@@ -3,8 +3,8 @@
 }
 
 .category-banner-container {
-    height: 200px;
-    background-color: #182e39;
+    height: 100px;
+    background-color: #fb9902;
     display: flex;
     justify-content: center;
     align-items: center;
