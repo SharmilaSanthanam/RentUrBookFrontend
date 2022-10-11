@@ -25,7 +25,9 @@ function App() {
   const dispatch = useDispatch();
   
     useEffect(() => {
-        const socket = io("ws://localhost:8080");
+        // const socket = io("ws://localhost:8080");
+        const socket = io("ws://renturbookmern.herokuapp.com");
+       
         socket.off("notification").on("notification", (msgObj, user_id) => {
             // logic for notification
             if (user_id === user._id) {

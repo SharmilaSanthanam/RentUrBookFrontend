@@ -58,8 +58,8 @@ function EditProductPage() {
     function showWidget() {
         const widget = window.cloudinary.createUploadWidget(
             {
-                cloudName: "your-cloudname",
-                uploadPreset: "your-preset",
+                cloudName: "dlpwhg7qc",
+                uploadPreset: "RentUrBook",
             },
             (error, result) => {
                 if (!error && result.event === "success") {
@@ -99,10 +99,10 @@ function EditProductPage() {
                                 <option disabled selected>
                                     -- Select One --
                                 </option>
-                                <option value="technology">technology</option>
-                                <option value="tablets">tablets</option>
-                                <option value="phones">phones</option>
-                                <option value="laptops">laptops</option>
+                                <option value="TechnicalBooks">Technical Books</option>
+                                <option value="KidsStoryBooks">Kids Story Books</option>
+                                <option value="SchoolBooks">School Books</option>
+                                <option value="Novels">Novels</option>
                             </Form.Select>
                         </Form.Group>
 

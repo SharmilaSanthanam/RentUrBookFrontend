@@ -4,7 +4,13 @@
 }
 
 .logo {
-    width: 50px;
+    width: 40%;
+}
+
+.ms-auto {
+    width: fit-content;
+    background-color: #ffb300;
+    color: rgb(122, 107, 18);
 }
 
 #cartcount {

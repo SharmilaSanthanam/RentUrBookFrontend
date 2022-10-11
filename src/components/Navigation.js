@@ -4,9 +4,8 @@ import { Navbar, Button, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from "react-redux";
 import { logout, resetNotifications } from '../features/userSlice';
+import banner from '../images/book2.png';
 import './Navigation.css'
-
-
 
 function Navigation() {
   const user = useSelector((state) => state.user);
@@ -34,12 +33,12 @@ function handleToggleNotifications() {
 
   return (
 
-    <Navbar bg="light" expand="lg">
+    <Navbar className="navbar navbar-light"  style={{backgroundColor: "#ffbf00"}} expand="lg">
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand >
-            RentUrBook
-
+            {/* RentUrBook */}
+            <img className="logo" src= {banner} alt="book" />
           </Navbar.Brand>
         </LinkContainer>
 
@@ -51,7 +50,7 @@ function handleToggleNotifications() {
 
             {!user && (
               <LinkContainer to="/login">
-                <Nav.Link>Login</Nav.Link>
+                <Nav.Link><b>LOGIN</b></Nav.Link>              
               </LinkContainer>
             )}
 
@@ -74,8 +73,8 @@ function handleToggleNotifications() {
                 <Nav.Link style={{ position: "relative" }} onClick={handleToggleNotifications}>
                     <i className="fas fa-bell" ref={bellRef} data-count={unreadNotifications || null}></i>
                 </Nav.Link>
-                <NavDropdown title={`${user.email}`} id="basic-nav-dropdown">
-               {/* <NavDropdown title={`${user.name}`} id="basic-nav-dropdown"> */}
+                {/* <NavDropdown title={`${user.email}`} id="basic-nav-dropdown"> */}
+               <NavDropdown title={`${user.name}`} id="basic-nav-dropdown">
                 {user.isAdmin && (
                   <>
                     <LinkContainer to="/admin">
