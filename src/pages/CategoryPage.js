@@ -52,9 +52,6 @@ function CategoryPage() {
                 <Container>
                     <Row>
                         <Col md={{ span: 10, offset: 1 }}>
-                            {productsSearch.map((product)=>(
-                                <ProductPreview {...product} />
-                            ))}
                             <Pagination data={productsSearch} RenderComponent={ProductSearch} pageLimit={1} dataLimit={5} tablePagination={false} />
                         </Col>
                     </Row>
