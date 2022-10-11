@@ -7,9 +7,6 @@ import axios from '../axios';
 import { useDispatch, useSelector } from "react-redux";
 import ProductPreview from '../components/ProductPreview';
 import { updateProducts } from '../features/productSlice';
-// import banner from '../images/book1.png';
-// import banner1 from '../images/front3.png';
-// import banner2 from '../images/front4.jpg';
 import salebanner from '../images/banner5.jpg';
 import './Home.css';
 
@@ -24,16 +21,9 @@ function Home() {
     },[dispatch]);
 
   return (
-    <div>
-               {/* <Col>
-     <img src= {banner1} alt="book" width="10%" height="10%" className="home-banner" />
-     <img src= {banner} alt="book"  width="30%" height="10%" className="home-banner" />
-     <img src= {banner2} alt="book" width="18%" height="10%" className="home-banner" />
-        </Col> */}
-       
-    
+    <div>     
      <div className="featured-products-container container mt-4">
-     <h2>Latest Products</h2>
+     <h2>New Arrivals</h2>
      {/* last products here --> comes from the backend */}
      <div className="d-flex justify-content-center flex-wrap">
                     {lastProducts.map((product) => (
@@ -54,7 +44,16 @@ function Home() {
             <div className="recent-products-container container mt-4">
                 <h2>Categories</h2>
                 <Row>
-                    {categories.map((category) => (
+                    {/* {categories.map((category) => (
+                        <LinkContainer to={`/category/${category.name.toLocaleLowerCase()}`}>
+                            <Col md={4}>
+                                <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${category.img})`, gap: "10px" }} className="category-tile">
+                                    {category.name}
+                                </div>
+                            </Col>
+                        </LinkContainer>
+                    ))} */}
+                      {categories.map((category) => (
                         <LinkContainer to={`/category/${category.name.toLocaleLowerCase()}`}>
                             <Col md={4}>
                                 <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${category.img})`, gap: "10px" }} className="category-tile">

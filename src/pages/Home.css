@@ -14,11 +14,6 @@
     margin-top: 30px;
 }
 
-/* .home-banner {
-    background-color: grey;
-    width: 100%;
-} */
-
 .card {
     border: none !important;
     width: 15rem !important;
@@ -35,4 +30,9 @@ img.card-img-top.product-preview-img {
     max-width: 1200px;
     display: block;
     margin: 0 auto;
+}
+
+a{
+   color: #ffa812; 
+   font-weight: bold;
 }
