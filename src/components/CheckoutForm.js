@@ -7,7 +7,7 @@ import { Alert, Col, Row, Form, Button } from "react-bootstrap";
 import StripeCheckout from 'react-stripe-checkout';
 
 function CheckoutForm() {
- 
+
     const stripe = useStripe();
     const elements = useElements();
     const user = useSelector((state) => state.user);
@@ -17,11 +17,10 @@ function CheckoutForm() {
     const [country, setCountry] = useState("");
     const [address, setAddress] = useState("");
     const [paying, setPaying] = useState(false);
-const onToken = (token)=>{
-        console.log(token); 
-        // navigate("/orders");
-        // props.history.push("/orders");
-      }
+    
+    const onToken = (token) => {
+        console.log(token);
+    }
 
     async function handlePay(e) {
         e.preventDefault();
@@ -46,10 +45,9 @@ const onToken = (token)=>{
             createOrder({ userId: user._id, cart: user.cart, address, country }).then((res) => {
                 if (!isLoading && !isError) {
                     setAlertMessage(`Payment ${paymentIntent.status}`);
-                    navigate("/orders");
-                    // setTimeout(() => {
-                    //    navigate("/orders");
-                    // }, 2000);
+                    setTimeout(() => {
+                        navigate("/orders");
+                    }, 2000);
                 }
             });
         }
@@ -90,30 +88,17 @@ const onToken = (token)=>{
                 </Row>
                 <label htmlFor="card-element">Card</label>
                 <CardElement id="card-element" />
-                     {/* <StripeCheckout
-                        token={onToken}
-                        name="RentUrBook"
-                        currency='INR'
-                        stripeKey="pk_test_51LgAbpSHIVrnfeGHpZbp8XY1egQuWBeZdWjZKe33BN5IYwX0yDBmte44X1QQkjM4LLF2Vft6iVd7FWPZGUGtZdb500HF3AHr4k"
-                    /> */}
                 <Button className="mt-3" type="submit" disabled={user.cart.count <= 0 || paying || isSuccess}>
                     {paying ?
-                                          <StripeCheckout
-                        token={onToken}
-                        name="RentUrBook"
-                        currency='INR'
-                        stripeKey="pk_test_51LgAbpSHIVrnfeGHpZbp8XY1egQuWBeZdWjZKe33BN5IYwX0yDBmte44X1QQkjM4LLF2Vft6iVd7FWPZGUGtZdb500HF3AHr4k"
-                    /> 
-                    : 
-                    "Pay"
+                        <StripeCheckout
+                            token={onToken}
+                            name="RentUrBook"
+                            currency='INR'
+                            stripeKey="pk_test_51LgAbpSHIVrnfeGHpZbp8XY1egQuWBeZdWjZKe33BN5IYwX0yDBmte44X1QQkjM4LLF2Vft6iVd7FWPZGUGtZdb500HF3AHr4k"
+                        />
+                        :
+                        "Pay"
                     }
-                     {/* <StripeCheckout
-                        token={onToken}
-                        name="RentUrBook"
-                        currency='INR'
-                        stripeKey="pk_test_51LgAbpSHIVrnfeGHpZbp8XY1egQuWBeZdWjZKe33BN5IYwX0yDBmte44X1QQkjM4LLF2Vft6iVd7FWPZGUGtZdb500HF3AHr4k"
-                    /> */}
-                    {/* {paying ? "Processing..." : "Pay"} */}
                 </Button>
             </Form>
         </Col>

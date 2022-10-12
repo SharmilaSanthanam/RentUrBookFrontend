@@ -38,8 +38,8 @@ function CategoryPage() {
         return <ProductPreview _id={_id} category={category} name={name} pictures={pictures} />;
     }
 
-  return (
-    <div className="category-page-container">
+    return (
+        <div className="category-page-container">
             <div className={`pt-3 ${category}-banner-container category-banner-container`}>
                 <h1 className="text-center">{category.charAt(0).toUpperCase() + category.slice(1)}</h1>
             </div>
@@ -58,7 +58,7 @@ function CategoryPage() {
                 </Container>
             )}
         </div>
-  )
+    )
 }
 
 export default CategoryPage;

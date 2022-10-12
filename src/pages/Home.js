@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { Col, Row } from 'react-bootstrap';
+// import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
-import categories from '../categories';
+// import { LinkContainer } from 'react-router-bootstrap';
+// import categories from '../categories';
 import axios from '../axios';
 import { useDispatch, useSelector } from "react-redux";
 import ProductPreview from '../components/ProductPreview';
 import { updateProducts } from '../features/productSlice';
-import salebanner from '../images/banner5.jpg';
+// import salebanner from '../images/banner5.jpg';
 import './Home.css';
 
 function Home() {
@@ -33,27 +33,18 @@ function Home() {
       
       <div>
                     <Link to="/category/all" style={{ textAlign: "right", display: "block", textDecoration: "none" }}>
-                        See more {">>"}
+                        See more {">>"}<br></br>
                     </Link>
                 </div>
       </div>
       {/* banner display */}
-      <div className="sale_banner_container mt-4">
+      {/* <div className="sale_banner_container mt-4">
                 <img src={salebanner} width="50%"  alt="book"/>
-            </div>
-            <div className="recent-products-container container mt-4">
+            </div> */}
+            {/* <div className="recent-products-container container mt-4">
                 <h2>Categories</h2>
                 <Row>
-                    {/* {categories.map((category) => (
-                        <LinkContainer to={`/category/${category.name.toLocaleLowerCase()}`}>
-                            <Col md={4}>
-                                <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${category.img})`, gap: "10px" }} className="category-tile">
-                                    {category.name}
-                                </div>
-                            </Col>
-                        </LinkContainer>
-                    ))} */}
-                      {categories.map((category) => (
+                    {categories.map((category) => (
                         <LinkContainer to={`/category/${category.name.toLocaleLowerCase()}`}>
                             <Col md={4}>
                                 <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${category.img})`, gap: "10px" }} className="category-tile">
@@ -62,8 +53,9 @@ function Home() {
                             </Col>
                         </LinkContainer>
                     ))}
+                      
                 </Row>
-            </div>
+            </div> */}
       </div>
   )
 }

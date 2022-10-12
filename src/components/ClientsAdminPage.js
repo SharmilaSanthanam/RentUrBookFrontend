@@ -44,8 +44,5 @@ function ClientsAdminPage() {
             </tbody>
         </Table>
     );
-
-    // return <div>ClientsAdminPage</div>;
 }
-
 export default ClientsAdminPage;
