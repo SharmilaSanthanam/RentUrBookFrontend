@@ -26,7 +26,8 @@ function App() {
   
     useEffect(() => {
         // const socket = io("ws://localhost:8080");
-        const socket = io("ws://renturbookmern.herokuapp.com");
+//         const socket = io("ws://renturbookmern.herokuapp.com");
+      const socket = io("ws://renturbook.onrender.com/");
        
         socket.off("notification").on("notification", (msgObj, user_id) => {
             // logic for notification
