@@ -4,7 +4,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const appApi = createApi({
     reducerPath: "appApi",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://renturbookmern.herokuapp.com" }),
+//     baseQuery: fetchBaseQuery({ baseUrl: "https://renturbookmern.herokuapp.com" }),
+     baseQuery: fetchBaseQuery({ baseUrl: "https://renturbook.onrender.com" }),
     endpoints: (builder) => ({
         signup: builder.mutation({
             query: (user) => ({
